@@ -1,0 +1,280 @@
+/* ===== QUESTION 4a: Background colours, fonts, text formatting ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1f2933;
+    background-color: #eef2f7;
+}
+
+header {
+    background-color: #12355b;
+    color: #ffffff;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #c9d8ea;
+    margin-top: 6px;
+}
+
+h2 {
+    color: #12355b;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #12355b;
+    margin: 18px 0 8px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+ul {
+    margin-left: 22px;
+}
+
+/* ===== QUESTION 4b: Horizontal navigation with hover effect ===== */
+nav {
+    background-color: #0c2440;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    padding: 14px 22px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #c8102e;
+    outline: none;
+}
+
+/* ===== QUESTION 4d: Flexbox page layout ===== */
+.layout {
+    display: flex;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    align-self: flex-start;
+    background-color: #ffffff;
+    border-top: 5px solid #c8102e;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+section {
+    background-color: #ffffff;
+    border-left: 5px solid #12355b;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.contact {
+    max-width: 1068px;
+    margin: 0 auto 24px;
+}
+
+/* ===== QUESTION 4c: Table borders, padding and spacing ===== */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.92rem;
+}
+
+th,
+td {
+    border: 1px solid #9aa5b1;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #12355b;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f4f9;
+}
+
+/* ===== Form styling ===== */
+form {
+    display: grid;
+    gap: 16px;
+    margin-top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+label.inline {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9aa5b1;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #12355b;
+}
+
+input.invalid {
+    border-color: #c8102e;
+}
+
+fieldset {
+    border: 1px solid #9aa5b1;
+    padding: 10px 14px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+.error {
+    display: block;
+    color: #c8102e;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #12355b;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c8102e;
+}
+
+button.secondary {
+    background-color: #5f6b7a;
+}
+
+.success {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #e3f6e8;
+    border: 1px solid #2f9e44;
+    color: #1b5e2c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.output {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #f0f4f9;
+    border: 1px solid #9aa5b1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: #0c2440;
+    color: #c9d8ea;
+    text-align: center;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+}
+
+/* ===== QUESTION 4e: Media query for smaller screens ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid #1d3a5f;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        align-self: stretch;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

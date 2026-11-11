@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- QUESTION 1: Header and navigation -->
+    <header>
+        <h1>Kakamega University</h1>
+        <h2>Student Information Portal</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#registration">Student Registration</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="layout">
+
+        <div class="content">
+
+            <section id="home">
+                <h2>Home</h2>
+                <p>Welcome to the University Student Information Portal. Use this site to view student records, register and contact the administration.</p>
+            </section>
+
+            <!-- QUESTION 2: About, list and table -->
+            <section id="about">
+                <h2>About</h2>
+                <p>The Student Information Portal allows students and staff to access student records, register for academic programmes and communicate with the university administration in one convenient place.</p>
+
+                <h3>Academic Programmes Offered</h3>
+                <ul>
+                    <li>Bachelor of Science in Computer Science</li>
+                    <li>Bachelor of Business Information Technology</li>
+                    <li>Bachelor of Education</li>
+                    <li>Bachelor of Commerce</li>
+                </ul>
+
+                <h3>Student Information</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Registration Number</th>
+                                <th>Programme</th>
+                                <th>Year of Study</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S001</td>
+                                <td>Mary Wanjiku</td>
+                                <td>CS/001/2024</td>
+                                <td>Computer Science</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>S002</td>
+                                <td>John Otieno</td>
+                                <td>BIT/014/2023</td>
+                                <td>Business Information Technology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>S003</td>
+                                <td>Faith Achieng</td>
+                                <td>ED/027/2025</td>
+                                <td>Education</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- QUESTION 3: Registration form -->
+            <section id="registration">
+                <h2>Student Registration</h2>
+
+                <form id="registrationForm" action="#" method="post" novalidate>
+
+                    <div class="field">
+                        <label for="fullname">Full name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="regno">Registration number</label>
+                        <input type="text" id="regno" name="regno" placeholder="e.g. CS/001/2024">
+                        <span class="error" id="regnoError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com">
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <fieldset class="field">
+                        <legend>Gender</legend>
+                        <label class="inline"><input type="radio" name="gender" value="Male" checked> Male</label>
+                        <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label class="inline"><input type="radio" name="gender" value="Other"> Other</label>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="programme">Academic programme</label>
+                        <select id="programme" name="programme">
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Business Information Technology">Business Information Technology</option>
+                            <option value="Education">Education</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Nursing">Nursing</option>
+                        </select>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit">Submit</button>
+                        <button type="reset" class="secondary">Reset</button>
+                    </div>
+                </form>
+
+                <!-- QUESTION 6: Output area -->
+                <div id="successMessage" class="success" hidden></div>
+                <div id="output" class="output" hidden></div>
+            </section>
+
+        </div>
+
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Academic Calendar</li>
+                <li>Fee Structure</li>
+                <li>Examination Timetable</li>
+                <li>Student Support</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@kakamegeuniversity.ac.ke</p>
+        <p>Phone: +254 700 000 000</p>
+        <p>Address: P.O. Box 100, Kakamega, Kenya</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kakamega University. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
